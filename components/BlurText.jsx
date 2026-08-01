@@ -74,7 +74,7 @@ const BlurText = ({
   );
 
   return (
-    <div ref={ref} className={className} style={{ display: "flex", flexWrap: "wrap" }}>
+    <div ref={ref} className={`flex flex-wrap ${className}`}>
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
@@ -82,8 +82,8 @@ const BlurText = ({
           duration: totalDuration,
           times,
           delay: (index * delay) / 1000,
+          ease: easing,
         };
-        spanTransition.ease = easing;
 
         return (
           <motion.span
