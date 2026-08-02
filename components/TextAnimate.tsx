@@ -23,26 +23,26 @@ export function TextAnimate() {
                 <div className="flex flex-col justify-start items-center gap-7 h-70">
                     <BlurText
                         text="We're Coming Soon"
-                        delay={100}
+                        delay={150}
                         animateBy="word"
-                        direction="top"
+                        direction="bottom"
                         threshold={1}
                         className="text-3xl md:text-6xl font-bold text-purple-200"
-                        animationFrom={{ opacity: 0, transform: 'translate3d(0,40px,0)' }}
-                        animationTo={[{ opacity: 1, transform: 'translate3d(0,0,0)' }]}
+                        animationFrom={{ opacity: 0, transform: 'translate3d(0,40px,0)', filter: 'blur(20px)' }}
+                        animationTo={[{ opacity: 1, transform: 'translate3d(0,0,0)', filter: 'blur(0px)' }]}
                         onAnimationComplete={() => {
                             setIsCompleted(true)
                         }}
                     />
                     {isCompleted && <BlurText
                         text="Get Ready, Something Exciting Is Coming"
-                        delay={50}
+                        delay={20}
                         animateBy="word"
-                        direction="left"
+                        direction="top"
                         threshold={1}
                         className="text-lg md:text-xl text-purple-500"
-                        animationFrom={{ opacity: 0, transform: 'translate3d(0,40px,0)' }}
-                        animationTo={[{ opacity: 1, transform: 'translate3d(0,0,0)' }]}
+                        animationFrom={{ opacity: 0, transform: 'translate3d(0,40px,0)', filter: 'blur(20px)' }}
+                        animationTo={[{ opacity: 1, transform: 'translate3d(0,0,0)', filter: 'blur(0px)' }]}
                         onAnimationComplete={() => { }}
                     />}
                 </div>
