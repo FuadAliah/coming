@@ -4,7 +4,7 @@ import DarkVeil from "./DarkVeil";
 export function Background() {
 
     return (
-        <div className='w-screen h-screen overflow-hidden z-0'>
+        <div className='w-full h-full overflow-hidden z-0'>
             <DarkVeil
                 hueShift={-30}
                 noiseIntensity={0}
